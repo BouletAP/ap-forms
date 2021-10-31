@@ -1,0 +1,19 @@
+{
+    "name": "bouletap/forms",
+    "description": "Core layer",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Logiciels BouletAP",
+            "email": "apb@bouletap.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "BouletAP\\Forms\\": "src/"
+        }
+    }
+}
