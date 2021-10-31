@@ -24,5 +24,4 @@ abstract class Forms extends \BouletAP\Forms\AbstractForm {
 	}
 	
 
-
 }
