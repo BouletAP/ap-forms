@@ -1,4 +1,4 @@
-<?php namespace BouletAP\Forms\Validations;
+<?php namespace BouletAP\Forms;
 
   
 class Required extends \BouletAP\Forms\AbstractValidation {

@@ -1,4 +1,4 @@
-<?php namespace BouletAP\Forms\Fields;
+<?php namespace BouletAP\Forms;
 
 
 class Blank extends \BouletAP\Forms\AbstractField {
