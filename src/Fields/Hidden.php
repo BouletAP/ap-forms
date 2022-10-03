@@ -1,4 +1,4 @@
-<?php namespace BouletAP\Forms;
+<?php namespace BouletAP\Forms\Fields;
 
 
 class Hidden extends \BouletAP\Forms\AbstractField {
