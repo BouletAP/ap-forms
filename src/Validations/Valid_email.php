@@ -1,6 +1,5 @@
 <?php namespace BouletAP\Forms\Validations;
   
-
   
 class Valid_email extends \BouletAP\Forms\AbstractValidation {
 
