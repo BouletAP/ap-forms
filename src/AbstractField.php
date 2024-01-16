@@ -19,6 +19,8 @@ abstract class AbstractField {
     public function __construct($name, $attributes = array()) {
         $this->name = $name;
         $this->attributes = $attributes;
+
+        $this->attributes['class'] = "formfield-".$name;
     }
     
     
@@ -94,6 +96,7 @@ abstract class AbstractField {
         if( !empty($_POST) && isset($_POST[$this->name]) ) {
             $val = $_POST[$this->name];
 
+            $val = urldecode($val);
             $val = strip_tags($val);
             $val = htmlspecialchars($val);
             

@@ -62,8 +62,15 @@ abstract class AbstractForm {
         return $field;
     }
 
-    public function getErrors() {
-        return $this->errors;
+    public function getErrors($format = false) {
+        $errors = $this->errors;
+        if( $format && !empty($this->errors) ) {
+            $errors = [];
+            foreach( $this->errors as $field => $error ) {
+                $errors[$field] = reset($error);
+            }
+        }
+        return $errors;
     }
     
 }
