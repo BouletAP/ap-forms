@@ -10,6 +10,8 @@ abstract class AbstractField {
     protected $attributes = array();
     protected $rules = array();
     
+    protected $errors = array();
+    
     
     abstract function display();
         
@@ -26,6 +28,8 @@ abstract class AbstractField {
         foreach( $this->getRules() as $rule ) {
             if( !$rule->validate($this->getValue()) ) {
                 $result = false;
+
+                $this->errors[$rule->getName()] = $rule->getMessage();
             }
         }
         
@@ -74,6 +78,9 @@ abstract class AbstractField {
         $this->value = $value;
     }
     
+    public function getErrors() {
+        return $this->errors;
+    }
     
     // Getters..
     public function getName() {
@@ -94,4 +101,6 @@ abstract class AbstractField {
         }
         return $this->value;
     }
+
+    
 }

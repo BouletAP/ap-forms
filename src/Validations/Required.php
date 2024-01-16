@@ -3,6 +3,11 @@
   
 class Required extends \BouletAP\Forms\AbstractValidation {
 
+    public function __construct() {
+        $this->name = "input-required";
+        $this->invalid_message = "Ce champs est requis";
+    }
+
     public function validate($value) {
         
         if( empty($value) ) {

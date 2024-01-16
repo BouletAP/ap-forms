@@ -1,7 +1,13 @@
 <?php namespace BouletAP\Forms\Validations;
   
+
   
 class Valid_email extends \BouletAP\Forms\AbstractValidation {
+
+    public function __construct() {
+        $this->name = "format-invalid";
+        $this->invalid_message = "Le format est incorrect";
+    }
 
     public function validate($value) {
         

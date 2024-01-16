@@ -1,6 +1,5 @@
 <?php namespace BouletAP\Forms\Fields;
 
-use \BouletAP\Forms\Validations\Valid_email;
 
 class Email extends \BouletAP\Forms\AbstractField {
     

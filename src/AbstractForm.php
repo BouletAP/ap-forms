@@ -7,6 +7,8 @@ abstract class AbstractForm {
     protected $action;
     protected $fields = array();
     
+    protected $errors = array();
+    
     
     
     public function __construct($action = '') {
@@ -20,6 +22,7 @@ abstract class AbstractForm {
         foreach( $this->fields as $field ) {
             if( !$field->validate() ) {
                 $result = false;
+                $this->errors[$field->getName()] = $field->getErrors();
             }
         }
         
@@ -57,6 +60,10 @@ abstract class AbstractForm {
         }        
         
         return $field;
+    }
+
+    public function getErrors() {
+        return $this->errors;
     }
     
 }
