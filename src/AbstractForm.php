@@ -2,6 +2,8 @@
 
 namespace BouletAP\Forms;
 
+use BouletAP\Forms\Fields\Blank;
+
 abstract class AbstractForm {
     
     protected $action;
