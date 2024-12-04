@@ -64,6 +64,14 @@ abstract class AbstractForm {
         return $field;
     }
 
+    public function getValues() {
+        $values = array();
+        foreach( $this->fields as $field ) {
+            $values[$field->getName()] = $field->getValue();
+        }
+        return $values;
+    }
+
     public function getErrors($format = false) {
         $errors = $this->errors;
         if( $format && !empty($this->errors) ) {
@@ -75,4 +83,8 @@ abstract class AbstractForm {
         return $errors;
     }
     
+
+    public function hasErrors() {
+        return !empty($this->errors);
+    }
 }
